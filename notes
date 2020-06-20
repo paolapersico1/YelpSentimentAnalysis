@@ -1,0 +1,32 @@
+- import dataset (pandas)
+- aggiungi colonna rating sulla base di stars (pos, neg, neutral)
+- classi sbilanciate, prendi lo stesso numero di recensioni
+- rimozione  stop words non indicata per sentiment analysis
+- tokenizzazione (gensim)
+- lemmatizzazione (gensim)
+- stemming (gensim)
+- splitting train/test (70-30) (scikitlearn) con shuffling
+- training word2vec (gensim) usando stemmed tokens (lo si salva in modo da non dover fare training ogni volta)
+	oppure uso pre-trained word-embeddings
+	oppure uso BERT (ma + complicato)
+- dizionario word2vec associa stringa a vettore
+- trasformo recensioni in vettore facendo la media dei vettori delle parole e salvo in csv 
+	usa anche tf-idf magari
+- faccio classificazione (scikitlearn)
+	random forest
+	linear SVM
+	naive bayes
+	rete neurale (pytorch) le RNN danno risultati migliori rispetto alle reti classiche e alle CNN
+- faccio testing
+
+https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_review.json
+
+"review_id":string "xQY8N_XvtGbearJ5X4QryQ"
+"user_id":string "OwjRMXRC0KyPrIlcjaXeFQ"
+"business_id":string "-MhfebM0QIsKt87iDN-FNw"
+"stars":int 2
+"useful":int 5
+"funny":int 0
+"cool":int 0
+"text":string "bla bla"
+"date":string "2015-04-15 05:21:16"
