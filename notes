@@ -1,3 +1,4 @@
+SENTIMENT ANALYSIS
 - import dataset (pandas)
 - aggiungi colonna rating sulla base di stars (pos, neg, neutral)
 - classi sbilanciate, prendi lo stesso numero di recensioni
@@ -19,14 +20,19 @@
 	rete neurale (pytorch) le RNN danno risultati migliori rispetto alle reti classiche e alle CNN
 - faccio testing
 
-https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_review.json
+RECOMMENDATION SYSTEM
+- predice numero di stelle che un dato utente dà ad un dato business sulla base:
+	1. di business simili visitati
+		- estrai business con almeno una categoria in comune
+		- kmeans sulla base di stelle in generale, numero di review 
+		- knn su numero di stelle 
+	2. delle preferenze di utenti simili
+		- estrai utenti che hanno visitato quel business
+		- kmeans su review-count, useful, funny, cool, fans, average_stars, compliment vari
+		- prendi cluster con utenti simili
+		- knn su numero di stelle
+- media di stelle è predizione
+- testing
 
-"review_id":string "xQY8N_XvtGbearJ5X4QryQ"
-"user_id":string "OwjRMXRC0KyPrIlcjaXeFQ"
-"business_id":string "-MhfebM0QIsKt87iDN-FNw"
-"stars":int 2
-"useful":int 5
-"funny":int 0
-"cool":int 0
-"text":string "bla bla"
-"date":string "2015-04-15 05:21:16"
+DATASET: https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_review.json
+SCHEMA: https://www.yelp.com/dataset/documentation/main
